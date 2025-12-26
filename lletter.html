@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>0110110001101111011101100110010100100000011011000110010101110100011101000110010101110010</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="hint">tap the pink origami</div>
+
+    <!-- CLICKABLE PINK ORIGAMI CRANE -->
+    <img src="bro.png" class="origami-crane" alt="Pink origami" onclick="openLetter()">
+  </div>
+
+  <div class="popup" id="popup" onclick="closeLetterFromBackground(event)">
+    <div class="letter-card" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closeLetter()">×</button>
+
+      <!-- PHOTO HERE -->
+      <div class="photo-wrapper">
+        <img src="wow.png" alt="Siya">
+      </div>
+
+      <div class="letter-title">A Letter</div>
+      <div class="letter-to">Happy New Year, Jackie!</div>
+
+      <div class="letter-body">
+Before the year ends, I just want to confess my feelings for you. I find you so pretty and decent, and I've been admiring you since the day you introduced yourself—that was back in September 2024 (during hugyaw practice ni!!). It sounds "botbot" because the reason feels so shallow.
+
+At first, I thought I was just infatuated, but as time went by, it felt different. It's just a glimpse, but why do I feel this way? It's strange because I don't even know you personally or socially. I've been following you on social media just to interact, but I never had the guts to talk to you. The funny part is, kay sige rakog padungog2 actually and I am sorry about it. I was actually bit sad after nako mibalhin og school knowing that I'd never see you again.
+
+As my counselor advised (yes, nagpacounsel jud ko 😭), I should express my feelings to people about what I feel for them. I'm like a whimpering fledgling right now, too scared to confess how I feel. But right now to conquer it. In fact, you are the first person to whom I have confessed. Respectfully, I don't know if you have someone right now, but I just wanted to express these feelings because I don't want to carry this sentiment into the new year. And if naa man, I'm so sorry bro.
+
+I hope you're doing well with your studies. May God bless your journey and your dream of becoming a nurse. Once again, Happy New Year!
+      </div>
+
+      <div class="letter-sign">
+        — Patrick
+      </div>
+
+      <div class="tiny-note">
+        I apologize, Jackie, if akoa gi-grab imong photo without any consent.
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

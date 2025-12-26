@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* clean pink background */
+  background: #e9a8bd;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hint {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #aa7d8a;
+  margin-bottom: 10px;
+}
+
+/* PINK ORIGAMI CRANE BUTTON (IMAGE) */
+.origami-crane {
+  width: 180px;      /* adjust size if needed */
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,0.25));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.origami-crane:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.35));
+}
+
+/* Popup overlay */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 10;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.letter-card {
+  background: #fffdf8;
+  max-width: 360px;
+  width: 90%;
+  padding: 26px 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  transform: translateY(20px) scale(0.9);
+  transition: transform 0.35s ease;
+  position: relative;
+  border: 1px solid #ffe0ea;
+  text-align: center;
+
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.popup.active .letter-card {
+  transform: translateY(0) scale(1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #ffe0ea;
+  color: #b25b76;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PHOTO STYLING */
+.photo-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 12px;
+  border: 3px solid #ffb3c6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.letter-title {
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  color: #b25b76;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.letter-to {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5b3240;
+  margin-bottom: 10px;
+}
+
+.letter-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #5b3240;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.letter-sign {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #b25b76;
+  text-align: right;
+}
+
+.tiny-note {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #c18a98;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .letter-card {
+    padding: 22px 18px 18px;
+  }
+  .letter-body {
+    font-size: 0.85rem;
+  }
+}
